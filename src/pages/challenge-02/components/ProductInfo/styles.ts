@@ -29,7 +29,7 @@ export const ProductInfoContainer = styled("div", {
     all: "unset",
     marginTop: "1.25rem",
     border: "1px solid #271A45",
-    padding: ".5rem",
+    padding: ".5rem 1rem",
     borderRadius: "9999px",
     cursor: "pointer",
     textTransform: "uppercase",

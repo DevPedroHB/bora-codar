@@ -16,7 +16,13 @@ export function ProductImg() {
         color="#271A45"
         onClick={() => setToggle(!toggle)}
       />
-      <Image src={SofaGif} width={449} height={222} alt="Sofa rosa." />
+      <Image
+        src={SofaGif}
+        width={449}
+        height={222}
+        alt="Sofa rosa."
+        unoptimized={true}
+      />
     </ProductImgContainer>
   ) : (
     <ProductImgContainer>
