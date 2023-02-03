@@ -1,4 +1,4 @@
-import { challenges } from "@/utils/challenges";
+import { challenges } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { GithubLogo, PaperPlaneRight } from "phosphor-react";
@@ -22,7 +22,7 @@ export default function Home() {
                 src={challenge.imgURL}
                 width={1920}
                 height={1348}
-                alt="Imagem do primeiro desafio"
+                alt={`Imagem do primeiro desafio ${challenge.title}`}
               />
               <div>
                 <h2>{challenge.title}</h2>
