@@ -1,6 +1,5 @@
 import AcordaDevinhoImg from "@/assets/images/acorda-devinho.png";
-import { getRandomInt } from "@/utils";
-import { getPercentage } from "@/utils/get-percentage";
+import { getPercentage, getRandomInt } from "@/utils";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import { Controls } from "./components/Controls";

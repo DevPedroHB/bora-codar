@@ -33,7 +33,9 @@ export default function Home() {
               <p>{challenge.description}</p>
             </CardBody>
             <CardFooter>
-              <Link href={`/challenge-${challenge.id}`}>
+              <Link
+                href={`/challenge-${String(challenge.id).padStart(2, "0")}`}
+              >
                 Acessar
                 <PaperPlaneRight size={20} weight="bold" color="#00B37E" />
               </Link>

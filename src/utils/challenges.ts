@@ -5,7 +5,7 @@ import BoraCodar04img from "@/assets/images/bora-codar-04.png";
 
 export const challenges = [
   {
-    id: "01",
+    id: 1,
     imgURL: BoraCodar01Img,
     title: "Player de Música",
     description:
@@ -13,7 +13,7 @@ export const challenges = [
     repositoryURL: "https://github.com/DevPedroHB",
   },
   {
-    id: "02",
+    id: 2,
     imgURL: BoraCodar02Img,
     title: "Card de Produto",
     description:
@@ -21,7 +21,7 @@ export const challenges = [
     repositoryURL: "https://github.com/DevPedroHB",
   },
   {
-    id: "03",
+    id: 3,
     imgURL: BoraCodar03Img,
     title: "Botões e Cursores",
     description:
@@ -29,7 +29,7 @@ export const challenges = [
     repositoryURL: "https://github.com/DevPedroHB",
   },
   {
-    id: "04",
+    id: 4,
     imgURL: BoraCodar04img,
     title: "Chat",
     description:

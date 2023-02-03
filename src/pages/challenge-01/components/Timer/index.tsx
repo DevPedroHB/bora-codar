@@ -36,8 +36,8 @@ export function Timer({ progressbar, currentTime, time }: ITimer) {
         />
       </ProgressRoot>
       <TimerClock>
-        <span>{timeFormatted}</span>
         <span>{currentTimeFormatted}</span>
+        <span>{timeFormatted}</span>
       </TimerClock>
     </TimerContainer>
   );

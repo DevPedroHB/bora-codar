@@ -3,11 +3,7 @@ export function formatRandomNumberInMinutes(
   separator: string,
   index: number
 ): string {
-  if (defaultValue.length === 2) {
-    defaultValue = `00${defaultValue}`;
-  } else if (defaultValue.length === 3) {
-    defaultValue = `0${defaultValue}`;
-  }
+  defaultValue = defaultValue.padStart(4, "0");
 
   const formatted =
     defaultValue.substring(0, index) +
