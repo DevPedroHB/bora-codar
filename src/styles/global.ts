@@ -5,6 +5,7 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     boxSizing: "border-box",
+    outline: "none",
 
     "::-webkit-scrollbar": {
       width: ".375rem",

@@ -18,6 +18,7 @@ export const ChatBodyContainer = styled("div", {
 
 export const Message = styled("div", {
   width: "fit-content",
+  height: "fit-content",
   display: "grid",
   gap: ".625rem",
   maxWidth: "75%",
