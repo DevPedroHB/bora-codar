@@ -1,4 +1,13 @@
-import { styled } from "@/styles";
+import { keyframes, styled } from "@/styles";
+
+const spin = keyframes({
+  from: {
+    transform: "rotate(0deg)",
+  },
+  to: {
+    transform: "rotate(360deg)",
+  },
+});
 
 export const ChatFooterContainer = styled("form", {
   width: "100%",
@@ -13,7 +22,12 @@ export const ChatFooterContainer = styled("form", {
     borderRadius: "999px",
     padding: ".875rem 3.625rem .875rem 1.5rem",
 
-    "&:focus": {
+    "&:disabled": {
+      opacity: 0.5,
+      cursor: "not-allowed",
+    },
+
+    "&:not(:disabled):focus": {
       outline: "2px solid #E1E1E6",
     },
   },
@@ -27,5 +41,27 @@ export const ChatFooterContainer = styled("form", {
     right: "1.5rem",
     transform: "translateY(-50%)",
     cursor: "pointer",
+
+    "&:disabled": {
+      opacity: 0.5,
+      cursor: "not-allowed",
+    },
+  },
+
+  small: {
+    position: "absolute",
+    top: "-1.25rem",
+  },
+
+  variants: {
+    loading: {
+      true: {
+        button: {
+          svg: {
+            animation: `${spin} 700ms infinite linear`,
+          },
+        },
+      },
+    },
   },
 });

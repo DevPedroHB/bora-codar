@@ -9,7 +9,7 @@ export function ChatHeader() {
       <div>
         <Image src={ChatGPTImg} width={48} height={48} alt="Imagem do perfil" />
         <UserStatus>
-          <strong>Cecillia Sassaki</strong>
+          <strong>ChatGPT</strong>
           <span>Online</span>
         </UserStatus>
       </div>

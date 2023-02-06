@@ -1,28 +1,41 @@
+import { chatDefaultMessages } from "@/utils/chat-default-messages";
+import dayjs from "dayjs";
+import { useEffect, useRef } from "react";
 import { ChatBodyContainer, Message } from "./styles";
 
-export function ChatBody() {
+interface IChatBody {
+  messages: typeof chatDefaultMessages;
+}
+
+export function ChatBody({ messages }: IChatBody) {
+  const MessageRef = useRef<HTMLDivElement>(null);
+
+  function scrollToBottom() {
+    if (MessageRef.current) {
+      MessageRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   return (
     <ChatBodyContainer>
-      <div>Hoje 11:30</div>
-      <Message>
-        <span>Cecilia - 11:30</span>
-        <p>Tive uma ideia incrível para um projeto! 😍</p>
-      </Message>
-      <Message you>
-        <span>Você - 11:32</span>
-        <p>Sério? Me conta mais.</p>
-      </Message>
-      <Message>
-        <span>Cecilia - 11:34</span>
-        <p>
-          E se a gente fizesse um chat moderno e responsivo em apenas uma
-          semana?
-        </p>
-      </Message>
-      <Message you>
-        <span>Você - 11:36</span>
-        <p>#boraCodar! 🚀</p>
-      </Message>
+      <div>Hoje</div>
+      {messages.map((message) => (
+        <Message
+          key={message.id}
+          you={message.author === "Você"}
+          ref={MessageRef}
+        >
+          <span>
+            {message.author} -{" "}
+            <span>{dayjs(message.date).format("HH-mm")}</span>
+          </span>
+          <p>{message.message}</p>
+        </Message>
+      ))}
     </ChatBodyContainer>
   );
 }

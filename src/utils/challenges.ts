@@ -11,7 +11,6 @@ export const challenges = [
     title: "Player de Música",
     description:
       "A proposta desse desafio é fazer uma página com vários tipos de players de musicas.",
-    repositoryURL: "https://github.com/DevPedroHB",
   },
   {
     id: 2,
@@ -19,7 +18,6 @@ export const challenges = [
     title: "Card de Produto",
     description:
       "A proposta desse desafio é fazer uma página de um produto sendo possível visualizar o produto 360º graus.",
-    repositoryURL: "https://github.com/DevPedroHB",
   },
   {
     id: 3,
@@ -27,7 +25,6 @@ export const challenges = [
     title: "Botões e Cursores",
     description:
       "A proposta desse desafio é fazer estilos de botões com suas variantes sempre definindo o cursor conforme correspondido.",
-    repositoryURL: "https://github.com/DevPedroHB",
   },
   {
     id: 4,
@@ -35,7 +32,6 @@ export const challenges = [
     title: "Chat",
     description:
       "A proposta desse desafio é fazer um layout responsivo de uma página de conversa de uma rede social.",
-    repositoryURL: "https://github.com/DevPedroHB",
   },
   {
     id: 5,
@@ -43,6 +39,5 @@ export const challenges = [
     title: "Calculadora",
     description:
       "A proposta desse desafio é fazer uma calculadora e torná-la funcional.",
-    repositoryURL: "https://github.com/DevPedroHB",
   },
 ];

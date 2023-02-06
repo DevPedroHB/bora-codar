@@ -2,7 +2,8 @@ import { styled } from "@/styles";
 
 export const ChatBodyContainer = styled("div", {
   overflowY: "scroll",
-  display: "grid",
+  display: "flex",
+  flexDirection: "column",
   gap: "1.875rem",
   fontSize: ".75rem",
   lineHeight: 1.4,

@@ -1,6 +1,7 @@
 import AcordaDevinhoImg from "@/assets/images/acorda-devinho.png";
 import { getPercentage, getRandomInt } from "@/utils";
 import { GetServerSideProps } from "next";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { Controls } from "./components/Controls";
 import { Info } from "./components/Info";
@@ -25,52 +26,58 @@ export default function Challenge01({
   progressbar,
 }: IChallenge01) {
   return (
-    <Challenge01Container>
-      <CardPlayer1>
-        <Image
-          src={AcordaDevinhoImg}
-          width={190}
-          height={190}
-          alt="Imagem da música"
-        />
-        <Info />
-        <Controls />
-        <Timer
-          progressbar={progressbar}
-          time={musicTime}
-          currentTime={currentMusicTime}
-        />
-      </CardPlayer1>
-      <CardPlayer2>
-        <CardWrapper>
+    <>
+      <NextSeo
+        title="Desafio 01 | Player de Música"
+        description="A proposta desse desafio é fazer uma página com vários tipos de players de musicas."
+      />
+      <Challenge01Container>
+        <CardPlayer1>
           <Image
             src={AcordaDevinhoImg}
-            width={84}
-            height={84}
+            width={190}
+            height={190}
             alt="Imagem da música"
           />
           <Info />
-        </CardWrapper>
-        <Controls />
-        <Timer
-          progressbar={progressbar}
-          time={musicTime}
-          currentTime={currentMusicTime}
-        />
-      </CardPlayer2>
-      <CardPlayer3>
-        <CardWrapper>
-          <Image
-            src={AcordaDevinhoImg}
-            width={84}
-            height={84}
-            alt="Imagem da música"
+          <Controls />
+          <Timer
+            progressbar={progressbar}
+            time={musicTime}
+            currentTime={currentMusicTime}
           />
-          <Info />
-        </CardWrapper>
-        <Controls />
-      </CardPlayer3>
-    </Challenge01Container>
+        </CardPlayer1>
+        <CardPlayer2>
+          <CardWrapper>
+            <Image
+              src={AcordaDevinhoImg}
+              width={84}
+              height={84}
+              alt="Imagem da música"
+            />
+            <Info />
+          </CardWrapper>
+          <Controls />
+          <Timer
+            progressbar={progressbar}
+            time={musicTime}
+            currentTime={currentMusicTime}
+          />
+        </CardPlayer2>
+        <CardPlayer3>
+          <CardWrapper>
+            <Image
+              src={AcordaDevinhoImg}
+              width={84}
+              height={84}
+              alt="Imagem da música"
+            />
+            <Info />
+          </CardWrapper>
+          <Controls />
+        </CardPlayer3>
+      </Challenge01Container>
+    </>
   );
 }
 
