@@ -1,13 +1,13 @@
-import { chatDefaultMessages } from "@/utils/chat-default-messages";
-import dayjs from "dayjs";
+import { useMessage } from "@/hooks/useMessage";
+import { formatDistanceToNow } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
 import { useEffect, useRef } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { ChatBodyContainer, Message } from "./styles";
 
-interface IChatBody {
-  messages: typeof chatDefaultMessages;
-}
-
-export function ChatBody({ messages }: IChatBody) {
+export function ChatBody() {
+  const { messages } = useMessage();
   const MessageRef = useRef<HTMLDivElement>(null);
 
   function scrollToBottom() {
@@ -31,9 +31,27 @@ export function ChatBody({ messages }: IChatBody) {
         >
           <span>
             {message.author} -{" "}
-            <span>{dayjs(message.date).format("HH-mm")}</span>
+            <span>
+              {formatDistanceToNow(new Date(message.date), {
+                addSuffix: true,
+                locale: ptBR,
+              })}
+            </span>
           </span>
-          <p>{message.message}</p>
+          <p>
+            <SyntaxHighlighter
+              language="typescript"
+              style={dracula}
+              customStyle={{
+                background: "transparent",
+                padding: 0,
+                color: "#E1E1E6",
+                fontFamily: "Fira Code, monospace",
+              }}
+            >
+              {message.message}
+            </SyntaxHighlighter>
+          </p>
         </Message>
       ))}
     </ChatBodyContainer>

@@ -1,7 +1,6 @@
 /* eslint-disable indent */
 import { chatDefaultMessages } from "@/utils/chat-default-messages";
 import { randomBytes } from "crypto";
-import dayjs from "dayjs";
 import produce from "immer";
 import {
   ActionTypes,
@@ -21,7 +20,7 @@ export function messagesReducer(
         draft.push({
           id: randomBytes(20).toString("hex"),
           author: "Você",
-          date: dayjs(),
+          date: new Date(),
           message: action.payload.message,
           done: true,
         });
@@ -35,7 +34,7 @@ export function messagesReducer(
           draft.push({
             id: randomBytes(20).toString("hex"),
             author: "ChatGPT",
-            date: dayjs(),
+            date: new Date(),
             message: action.payload.replyMessage,
             done: false,
           });

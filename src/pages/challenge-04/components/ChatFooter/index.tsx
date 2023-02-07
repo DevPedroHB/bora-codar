@@ -1,13 +1,9 @@
+import { useMessage } from "@/hooks/useMessage";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CircleNotch, PaperPlaneRight } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ChatFooterContainer } from "./styles";
-
-interface IChatFooter {
-  handleNewMessage: (message: string) => void;
-  handleNewReplyMessage: (message: string, done: boolean) => void;
-}
 
 const MessageFormSchema = z.object({
   message: z
@@ -18,10 +14,8 @@ const MessageFormSchema = z.object({
 
 type MessageFormData = z.infer<typeof MessageFormSchema>;
 
-export function ChatFooter({
-  handleNewMessage,
-  handleNewReplyMessage,
-}: IChatFooter) {
+export function ChatFooter() {
+  const { handleNewMessage, handleNewReplyMessage } = useMessage();
   const {
     register,
     handleSubmit,
