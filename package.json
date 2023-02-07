@@ -29,7 +29,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.0",
-    "react-syntax-highlighter": "^15.5.0",
+    "react-nl2br": "^1.0.4",
     "typescript": "4.9.5",
     "zod": "^3.20.2"
   },

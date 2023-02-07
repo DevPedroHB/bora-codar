@@ -1,7 +1,7 @@
 import { ActionTypes } from "@/reducers/messages/actions";
 import { messagesReducer } from "@/reducers/messages/reducer";
 import { chatDefaultMessages } from "@/utils/chat-default-messages";
-import { setCookie } from "nookies";
+import { parseCookies, setCookie } from "nookies";
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 
 interface IMessageContext {
@@ -14,17 +14,19 @@ export const MessageContext = createContext({} as IMessageContext);
 
 interface IMessageContextProvider {
   children: ReactNode;
-  cookiesStateAsJSON: string;
 }
 
 export default function MessageContextProvider({
   children,
-  cookiesStateAsJSON,
 }: IMessageContextProvider) {
   const [messages, dispatch] = useReducer(
     messagesReducer,
     chatDefaultMessages,
     () => {
+      const cookies = parseCookies();
+      const cookiesStateAsJSON =
+        cookies["@bora-codar:messages-state-challenge-04"];
+
       if (cookiesStateAsJSON) {
         return JSON.parse(cookiesStateAsJSON);
       } else {

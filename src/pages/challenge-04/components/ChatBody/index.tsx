@@ -2,8 +2,7 @@ import { useMessage } from "@/hooks/useMessage";
 import { formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { useEffect, useRef } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Nl2br from "react-nl2br";
 import { ChatBodyContainer, Message } from "./styles";
 
 export function ChatBody() {
@@ -38,20 +37,7 @@ export function ChatBody() {
               })}
             </span>
           </span>
-          <p>
-            <SyntaxHighlighter
-              language="typescript"
-              style={dracula}
-              customStyle={{
-                background: "transparent",
-                padding: 0,
-                color: "#E1E1E6",
-                fontFamily: "Fira Code, monospace",
-              }}
-            >
-              {message.message}
-            </SyntaxHighlighter>
-          </p>
+          <p>{Nl2br(message.message)}</p>
         </Message>
       ))}
     </ChatBodyContainer>

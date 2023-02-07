@@ -1,4 +1,5 @@
 import MessageContextProvider from "@/contexts/MessageContext";
+import { chatDefaultMessages } from "@/utils/chat-default-messages";
 import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
 import { parseCookies } from "nookies";
@@ -12,8 +13,10 @@ interface IChallenge04 {
 }
 
 export default function Challenge04({ cookiesStateAsJSON }: IChallenge04) {
+  console.log(JSON.parse(cookiesStateAsJSON));
+
   return (
-    <MessageContextProvider cookiesStateAsJSON={cookiesStateAsJSON}>
+    <MessageContextProvider>
       <NextSeo
         title="Desafio 04 | Chat"
         description="A proposta desse desafio é fazer um layout responsivo de uma página de conversa de uma rede social."
@@ -31,7 +34,11 @@ export default function Challenge04({ cookiesStateAsJSON }: IChallenge04) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const cookies = parseCookies(ctx);
-  const cookiesStateAsJSON = cookies["@bora-codar:messages-state-challenge-04"];
+  let cookiesStateAsJSON = cookies["@bora-codar:messages-state-challenge-04"];
+
+  if (!cookiesStateAsJSON) {
+    cookiesStateAsJSON = JSON.stringify(chatDefaultMessages);
+  }
 
   return {
     props: { cookiesStateAsJSON },
