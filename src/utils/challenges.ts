@@ -3,6 +3,7 @@ import BoraCodar02Img from "@/assets/images/bora-codar-02.png";
 import BoraCodar03Img from "@/assets/images/bora-codar-03.png";
 import BoraCodar04img from "@/assets/images/bora-codar-04.png";
 import BoraCodar05img from "@/assets/images/bora-codar-05.png";
+import BoraCodar06img from "@/assets/images/bora-codar-06.png";
 
 export const challenges = [
   {
@@ -39,5 +40,12 @@ export const challenges = [
     title: "Calculadora",
     description:
       "A proposta desse desafio é fazer uma calculadora e torná-la funcional.",
+  },
+  {
+    id: 6,
+    imgURL: BoraCodar06img,
+    title: "Cartão de Embarque",
+    description:
+      "A proposta desse desafio é fazer dois modelos de cartão de embarque.",
   },
 ];

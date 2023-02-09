@@ -8,13 +8,7 @@ import { ChatFooter } from "./components/ChatFooter";
 import { ChatHeader } from "./components/ChatHeader";
 import { Challenge04Container, Content } from "./styles";
 
-interface IChallenge04 {
-  cookiesStateAsJSON: string;
-}
-
-export default function Challenge04({ cookiesStateAsJSON }: IChallenge04) {
-  console.log(JSON.parse(cookiesStateAsJSON));
-
+export default function Challenge04() {
   return (
     <MessageContextProvider>
       <NextSeo

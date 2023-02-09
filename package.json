@@ -19,6 +19,7 @@
     "axios": "^1.3.2",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "eslint-config-next": "13.1.6",
     "eventsource-parser": "^0.1.0",
     "immer": "^9.0.19",
@@ -29,7 +30,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.0",
+    "react-icons": "^4.7.1",
     "react-nl2br": "^1.0.4",
+    "react-qr-code": "^2.0.11",
     "typescript": "4.9.5",
     "zod": "^3.20.2"
   },

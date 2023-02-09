@@ -1,7 +1,7 @@
 import { ActionTypes } from "@/reducers/messages/actions";
 import { messagesReducer } from "@/reducers/messages/reducer";
 import { chatDefaultMessages } from "@/utils/chat-default-messages";
-import { parseCookies, setCookie } from "nookies";
+import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 
 interface IMessageContext {
@@ -56,6 +56,8 @@ export default function MessageContextProvider({
 
   useEffect(() => {
     if (messages[messages.length - 1].done === true) {
+      destroyCookie(null, "@bora-codar:messages-state-challenge-04");
+
       setCookie(
         null,
         "@bora-codar:messages-state-challenge-04",
