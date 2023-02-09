@@ -8,8 +8,7 @@ import { ChatFooterContainer } from "./styles";
 const MessageFormSchema = z.object({
   message: z
     .string()
-    .min(3, { message: "A mensagem deve ter no mínimo 3 caracteres." })
-    .max(100, { message: "A mensagem deve ter no máximo 100 caracteres." }),
+    .min(3, { message: "A mensagem deve ter no mínimo 3 caracteres." }),
 });
 
 type MessageFormData = z.infer<typeof MessageFormSchema>;
@@ -73,7 +72,6 @@ export function ChatFooter() {
       <input
         type="text"
         placeholder="Digite sua mensagem"
-        maxLength={100}
         autoFocus
         required
         {...register("message")}

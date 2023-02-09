@@ -8,9 +8,13 @@ import { ChatFooter } from "./components/ChatFooter";
 import { ChatHeader } from "./components/ChatHeader";
 import { Challenge04Container, Content } from "./styles";
 
-export default function Challenge04() {
+interface IChallenge04 {
+  cookiesStateAsJSON: string;
+}
+
+export default function Challenge04({ cookiesStateAsJSON }: IChallenge04) {
   return (
-    <MessageContextProvider>
+    <MessageContextProvider cookiesStateAsJSON={cookiesStateAsJSON}>
       <NextSeo
         title="Desafio 04 | Chat"
         description="A proposta desse desafio é fazer um layout responsivo de uma página de conversa de uma rede social."
@@ -28,7 +32,9 @@ export default function Challenge04() {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const cookies = parseCookies(ctx);
-  let cookiesStateAsJSON = cookies["@bora-codar:messages-state-challenge-04"];
+  let cookiesStateAsJSON = await cookies[
+    "@bora-codar:messages-state-challenge-04"
+  ];
 
   if (!cookiesStateAsJSON) {
     cookiesStateAsJSON = JSON.stringify(chatDefaultMessages);
