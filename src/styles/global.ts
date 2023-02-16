@@ -1,4 +1,4 @@
-import { globalCss } from "@stitches/react";
+import { globalCss } from "@/styles";
 
 export const globalStyles = globalCss({
   "*": {
@@ -24,10 +24,12 @@ export const globalStyles = globalCss({
   },
 
   html: {
-    "@media screen and (max-width: 1024px)": {
+    scrollBehavior: "smooth",
+
+    "@bp3": {
       fontSize: "97.5%",
     },
-    "@media screen and (max-width: 768px)": {
+    "@bp2": {
       fontSize: "87.5%",
     },
   },

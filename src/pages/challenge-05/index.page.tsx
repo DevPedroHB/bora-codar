@@ -9,7 +9,7 @@ export default function Challenge05() {
     <CalculatorContextProvider>
       <NextSeo
         title="Desafio 05 | Calculadora"
-        description="A proposta desse desafio é fazer uma calculadora e torná-la funcional."
+        description="Este projeto consiste em uma calculadora simples. O objetivo do projeto é torná-la funcional, permitindo que o usuário realize operações matemáticas."
       />
       <Challenge05Container>
         <div>

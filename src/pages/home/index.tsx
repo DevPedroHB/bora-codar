@@ -39,7 +39,7 @@ export default function Home() {
                   </div>
                 </CardHeader>
                 <CardBody>
-                  <p>{challenge.description}</p>
+                  <p title={challenge.description}>{challenge.description}</p>
                 </CardBody>
                 <CardFooter>
                   <Link href={`/challenge-${challengeIdFormatted}`}>

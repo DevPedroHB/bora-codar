@@ -25,7 +25,7 @@ export default function Challenge03() {
     <>
       <NextSeo
         title="Desafio 03 | Botões e Cursores"
-        description="A proposta desse desafio é fazer estilos de botões com suas variantes sempre definindo o cursor conforme correspondido."
+        description="Este projeto consiste em um conjunto de estilos para botões. O objetivo é fornecer uma seleção de estilos de botões com suas respectivas variantes, permitindo a customização de botões para diferentes necessidades em projetos web."
       />
       <Challenge03Container>
         <Content>

@@ -29,7 +29,7 @@ export default function Challenge01({
     <>
       <NextSeo
         title="Desafio 01 | Player de Música"
-        description="A proposta desse desafio é fazer uma página com vários tipos de players de musicas."
+        description="Este projeto consiste em uma página que apresenta diferentes tipos de players de música, cada um com suas próprias funcionalidades e estilos de design."
       />
       <Challenge01Container>
         <CardPlayer1>

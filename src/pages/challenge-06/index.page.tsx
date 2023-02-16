@@ -7,7 +7,7 @@ export default function Challenge06() {
     <>
       <NextSeo
         title="Desafio 06 | Cartão de Embarque"
-        description="A proposta desse desafio é fazer dois modelos de cartão de embarque."
+        description="Este projeto consiste em dois modelos de cartão de embarque para uso em aplicações de companhias aéreas e podem ser utilizados como templates para a geração de cartões de embarque personalizados."
       />
       <Challenge06Container>
         <Challenge06Content>

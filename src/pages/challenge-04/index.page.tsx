@@ -17,7 +17,7 @@ export default function Challenge04({ cookiesStateAsJSON }: IChallenge04) {
     <MessageContextProvider cookiesStateAsJSON={cookiesStateAsJSON}>
       <NextSeo
         title="Desafio 04 | Chat"
-        description="A proposta desse desafio é fazer um layout responsivo de uma página de conversa de uma rede social."
+        description="Este projeto consiste em um layout responsivo de uma página de conversa de uma rede social. O objetivo do projeto é permitir que os usuários tenham uma experiência agradável e funcional na interação em uma rede social, especialmente no que diz respeito a conversas."
       />
       <Challenge04Container>
         <Content>

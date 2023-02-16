@@ -8,7 +8,7 @@ export default function Challenge02() {
     <>
       <NextSeo
         title="Desafio 02 | Card de Produto"
-        description="A proposta desse desafio é fazer uma página de um produto sendo possível visualizar o produto 360º graus."
+        description="Este projeto consiste em uma página que permite ao usuário visualizar um produto em 360 graus, utilizando tecnologias de renderização de imagens e animações para criar uma experiência imersiva."
       />
       <Challenge02Container>
         <ProductImg />
