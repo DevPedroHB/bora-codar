@@ -1,5 +1,5 @@
 import MessageContextProvider from "@/contexts/MessageContext";
-import { chatDefaultMessages } from "@/utils/chat-default-messages";
+import { chatDefaultMessages } from "@/utils";
 import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
 import { parseCookies } from "nookies";

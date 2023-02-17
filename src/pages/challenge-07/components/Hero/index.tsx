@@ -33,8 +33,6 @@ export function Hero() {
     "location"
   );
 
-  console.log(cidades);
-
   return (
     <HeroContainer>
       <Image

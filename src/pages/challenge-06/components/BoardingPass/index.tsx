@@ -11,7 +11,7 @@ export function BoardingPass({ modelTwo }: IBoardingPass) {
   return (
     <BoardingPassContainer>
       <CardBoardingPass modelTwo={modelTwo ? "top" : undefined}>
-        <Row>
+        <Row spaceBottom>
           <Column>
             <span>Voo</span>
             <p>RS995</p>
@@ -22,25 +22,36 @@ export function BoardingPass({ modelTwo }: IBoardingPass) {
           </Column>
         </Row>
         <Row>
-          <Column textDefault>
+          <Column>
             <span>São Paulo, Brasil</span>
+          </Column>
+          <Column right>
+            <span>São Francisco, EUA</span>
+          </Column>
+        </Row>
+        <Row>
+          <Column>
             <h2>GRU</h2>
-            <p>17:00</p>
           </Column>
           <Column>
             <IoAirplane size={24} />
           </Column>
-          <Column textDefault right>
-            <span>São Francisco, EUA</span>
+          <Column right>
             <h2>SFO</h2>
+          </Column>
+        </Row>
+        <Row>
+          <Column textDefault>
+            <p>17:00</p>
+          </Column>
+          <Column textDefault right>
             <p>
-              04:48<small>+1</small>
+              04:48<sup>+1</sup>
             </p>
           </Column>
         </Row>
       </CardBoardingPass>
-      <hr style={modelTwo ? { width: "91%" } : { width: "86.2%" }} />
-      <CardBoardingPass modelTwo={modelTwo ? "middle" : undefined}>
+      <CardBoardingPass modelTwo={modelTwo ? "middle" : undefined} middle>
         <Row>
           <Column>
             <span>Passageiro</span>
@@ -52,10 +63,9 @@ export function BoardingPass({ modelTwo }: IBoardingPass) {
           </Column>
         </Row>
       </CardBoardingPass>
-      <hr style={modelTwo ? { width: "91%" } : { width: "86.2%" }} />
       <CardBoardingPass modelTwo={modelTwo ? "bottom" : undefined}>
-        <Row>
-          <Column>
+        <Row spaceBottom>
+          <Column gapDiv>
             <div>
               <span>Embarque</span>
               <strong>16:15</strong>

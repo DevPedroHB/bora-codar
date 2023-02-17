@@ -1,6 +1,6 @@
 import { ActionTypes } from "@/reducers/messages/actions";
 import { messagesReducer } from "@/reducers/messages/reducer";
-import { chatDefaultMessages } from "@/utils/chat-default-messages";
+import { chatDefaultMessages } from "@/utils";
 import { destroyCookie, setCookie } from "nookies";
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 

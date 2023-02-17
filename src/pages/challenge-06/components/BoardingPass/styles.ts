@@ -4,12 +4,6 @@ export const BoardingPassContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-
-  hr: {
-    backgroundColor: "#FFF",
-    border: 0,
-    borderTop: "1px dashed rgba(0, 0, 0, 0.32)",
-  },
 });
 
 export const Row = styled("div", {
@@ -28,16 +22,20 @@ export const Row = styled("div", {
       fontWeight: 500,
     },
   },
+
+  variants: {
+    spaceBottom: {
+      true: {
+        marginBottom: "1.5rem",
+      },
+    },
+  },
 });
 
 export const Column = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-
-  "div + div": {
-    marginTop: "1rem",
-  },
 
   span: {
     fontWeight: 400,
@@ -54,13 +52,12 @@ export const Column = styled("div", {
     letterSpacing: "-0.02em",
     color: "rgba(0, 0, 0, 0.88)",
 
-    small: {
+    sup: {
       fontWeight: 500,
       fontSize: ".625rem",
       lineHeight: ".75rem",
       letterSpacing: "-0.02em",
       color: "rgba(0, 0, 0, 0.88)",
-      verticalAlign: "top",
     },
   },
 
@@ -110,6 +107,12 @@ export const Column = styled("div", {
         p: {
           fontWeight: 400,
         },
+      },
+    },
+
+    gapDiv: {
+      true: {
+        gap: "1rem",
       },
     },
   },

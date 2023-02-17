@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { chatDefaultMessages } from "@/utils/chat-default-messages";
+import { chatDefaultMessages } from "@/utils";
 import { randomBytes } from "crypto";
 import produce from "immer";
 import {
