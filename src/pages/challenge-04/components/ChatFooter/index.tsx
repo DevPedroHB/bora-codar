@@ -78,11 +78,11 @@ export function ChatFooter() {
         disabled={isSubmitting}
       />
       {isSubmitting ? (
-        <button disabled={isSubmitting}>
+        <button disabled>
           <CircleNotch size={24} weight="bold" />
         </button>
       ) : (
-        <button disabled={isSubmitting}>
+        <button>
           <PaperPlaneRight size={24} weight="fill" />
         </button>
       )}

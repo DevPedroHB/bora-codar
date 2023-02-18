@@ -98,9 +98,19 @@ export const HeroSearchGroup = styled("div", {
     transform: "translateY(-50%)",
     left: ".875rem",
   },
+
+  small: {
+    position: "absolute",
+    left: 0,
+    bottom: "-1.25rem",
+    color: "#E45858",
+  },
 });
 
 export const HeroSearchButton = styled("button", {
+  display: "flex",
+  alignItems: "center",
+  gap: ".25rem",
   width: "min-content",
   backgroundColor: "#6246EA",
   color: "#FFF",
@@ -113,6 +123,11 @@ export const HeroSearchButton = styled("button", {
   cursor: "pointer",
   transition: "filter .2s",
   whiteSpace: "nowrap",
+
+  "&:disabled": {
+    opacity: 0.8,
+    cursor: "not-allowed",
+  },
 
   "&:not(:disabled):hover": {
     filter: "brightness(110%)",

@@ -14,7 +14,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage01,
     title: "O Python do vovô não sobe mais",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.",
     location: "São Paulo - SP",
   },
   {
@@ -22,7 +22,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage02,
     title: "Todo mundo null",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
     location: "Florianópolis - SC",
   },
   {
@@ -30,7 +30,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage03,
     title: "Hoje dou exception",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta.",
     location: "Curitiba - PR",
   },
   {
@@ -38,7 +38,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage04,
     title: "Manda Node",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.",
     location: "Salvador - BA",
   },
   {
@@ -46,7 +46,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage05,
     title: "Só no back-end",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
     location: "São Paulo - SP",
   },
   {
@@ -54,7 +54,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage06,
     title: "Esse anel não é de Ruby",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
     location: "São Paulo - SP",
   },
   {
@@ -62,7 +62,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage07,
     title: "Pimenta no C# dos outros é refresco",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt.",
     location: "Rio de Janeiro - RJ",
   },
   {
@@ -70,7 +70,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage08,
     title: "EnCACHE aqui",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     location: "Porto Alegre - RS",
   },
   {
@@ -78,7 +78,7 @@ export const carnavalBlocks = [
     imageUrl: CarnavalImage09,
     title: "Não valho nada mas JAVA li",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+      "Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.",
     location: "São Paulo - SP",
   },
 ];
