@@ -5,6 +5,7 @@ import BoraCodar04img from "@/assets/images/bora-codar-04.png";
 import BoraCodar05img from "@/assets/images/bora-codar-05.png";
 import BoraCodar06img from "@/assets/images/bora-codar-06.png";
 import BoraCodar07img from "@/assets/images/bora-codar-07.png";
+import BoraCodar08img from "@/assets/images/bora-codar-08.png";
 
 export const challenges = [
   {
@@ -55,5 +56,12 @@ export const challenges = [
     title: "Blocos de Carnaval",
     description:
       "Este projeto é uma página web onde o usuário pode buscar por blocos de carnaval, incluindo informações como data, hora e localização. Ele foi desenvolvido para ajudar os usuários a encontrar e participar de blocos de carnaval.",
+  },
+  {
+    id: 8,
+    imgURL: BoraCodar08img,
+    title: "Dashboard",
+    description:
+      "Este projeto é um dashboard que permite acompanhar o desempenho de vendas de uma empresa. Ele apresenta diversas informações relevantes para o acompanhamento do negócio, tais como o NPS mensal, a progressbar circular com vendas fechadas, a meta mensal e um gráfico com vendas por dia da semana com o melhor e o pior dia.",
   },
 ];
