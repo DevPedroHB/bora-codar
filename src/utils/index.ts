@@ -1,6 +1,7 @@
 export { carnavalBlocks } from "./carnaval-blocks";
 export { challenges } from "./challenges";
 export { chatDefaultMessages } from "./chat-default-messages";
+export { formatMoneyWithSuffix } from "./format-money-with-suffix";
 export { formatRandomNumberInMinutes } from "./format-random-number-in-minutes";
 export { formatTextForRoute } from "./format-text-for-route";
 export { getPercentage } from "./get-percentage";
