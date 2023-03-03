@@ -7,15 +7,13 @@ export const Challenge08Container = styled("main", {
   height: "100%",
   minHeight: "100vh",
   backgroundColor: "#292738",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  display: "grid",
+  placeItems: "center",
 });
 
 export const Challenge08Content = styled("div", {
   maxWidth: "73rem",
   width: "100%",
-  margin: "0 auto",
   padding: "1.5rem",
   display: "grid",
   gap: "3.6875rem",

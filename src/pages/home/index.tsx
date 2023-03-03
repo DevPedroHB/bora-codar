@@ -34,7 +34,7 @@ export default function Home() {
                     alt={`Imagem do primeiro desafio ${challenge.title}`}
                   />
                   <div>
-                    <h2>{challenge.title}</h2>
+                    <h2 title={challenge.title}>{challenge.title}</h2>
                     <span>Desafio #{challengeIdFormatted}</span>
                   </div>
                 </CardHeader>

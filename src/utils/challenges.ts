@@ -6,6 +6,7 @@ import BoraCodar05img from "@/assets/images/bora-codar-05.png";
 import BoraCodar06img from "@/assets/images/bora-codar-06.png";
 import BoraCodar07img from "@/assets/images/bora-codar-07.png";
 import BoraCodar08img from "@/assets/images/bora-codar-08.png";
+import BoraCodar09img from "@/assets/images/bora-codar-09.png";
 
 export const challenges = [
   {
@@ -63,5 +64,12 @@ export const challenges = [
     title: "Dashboard",
     description:
       "Este projeto é um dashboard que permite acompanhar o desempenho de vendas de uma empresa. Ele apresenta diversas informações relevantes para o acompanhamento do negócio, tais como o NPS mensal, a progressbar circular com vendas fechadas, a meta mensal e um gráfico com vendas por dia da semana com o melhor e o pior dia.",
+  },
+  {
+    id: 9,
+    imgURL: BoraCodar09img,
+    title: "Conversor de Moedas",
+    description:
+      "Este projeto é um conversor de moedas que permite a conversão entre diferentes tipos de moedas. Além disso, ele apresenta um gráfico que mostra as cotações entre as moedas selecionadas nos últimos 12 meses.",
   },
 ];

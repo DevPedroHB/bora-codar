@@ -63,6 +63,7 @@ export async function OpenAIStream(payload: OpenAIStreamEvent) {
 
       const parser = createParser(onParse);
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       for await (const chunk of response.body as any) {
         parser.feed(decoder.decode(chunk));
       }
