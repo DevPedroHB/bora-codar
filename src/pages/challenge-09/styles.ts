@@ -17,7 +17,7 @@ export const QuoteCard = styled("div", {
   width: "100%",
   padding: "4rem 5rem",
   backgroundColor: "#FFFFFF",
-  boxShadow: "0px 4px 32px rgba(15, 23, 42, 0.15)",
+  boxShadow: "0px .25rem 2rem rgba(15, 23, 42, 0.15)",
   borderRadius: "1rem",
   display: "grid",
   gap: "4rem",
@@ -26,5 +26,9 @@ export const QuoteCard = styled("div", {
     fontWeight: 600,
     fontSize: "1.25rem",
     lineHeight: "120%",
+  },
+
+  "@bp2": {
+    padding: "1.5rem",
   },
 });
