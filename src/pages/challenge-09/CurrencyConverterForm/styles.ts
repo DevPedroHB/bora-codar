@@ -14,58 +14,51 @@ export const Form = styled("form", {
   gap: "1rem",
 });
 
-export const FormGroup = styled("div", {
+export const InputWrapper = styled("div", {
   flex: 1,
   display: "flex",
+  alignItems: "center",
   position: "relative",
+  border: ".0625rem solid #94A3B8",
+  borderRadius: ".5rem",
+  padding: "1rem",
+
+  "> span": {
+    marginRight: ".25rem",
+  },
 
   input: {
     width: "100%",
-    minWidth: "10rem",
-    padding: "1rem 1rem 1rem 2.5rem",
+    minWidth: "5rem",
     backgroundColor: "transparent",
-    border: ".0625rem solid #94A3B8",
-    borderRight: 0,
-    borderRadius: ".5rem 0 0 .5rem",
+    border: "0",
+    borderRight: "1px solid #94A3B8",
     fontWeight: 400,
     fontSize: "1rem",
     lineHeight: 0,
     color: "#0F172A",
-
-    "&:focus": {
-      outline: 0,
-      border: ".0625rem solid #7C3AED",
-      borderRight: 0,
-    },
   },
 
-  variants: {
-    icon: {
-      true: {
-        flex: 0,
+  "&:has(:focus)": {
+    border: ".0938rem solid #7C3AED",
+  },
 
-        svg: {
-          cursor: "pointer",
-        },
-      },
-    },
+  "&:has(:hover)": {
+    border: ".0938rem solid #7C3AED",
   },
 });
 
-export const CurrencySymbol = styled("span", {
-  position: "absolute",
-  top: "50%",
-  left: "1rem",
-  transform: "translateY(-50%)",
+export const InvertValues = styled("div", {
+  flex: 0,
+  lineHeight: 0,
+  cursor: "pointer",
 });
 
 export const SelectTrigger = styled(Select.SelectTrigger, {
   gap: ".5rem",
-  padding: "1rem",
+  paddingLeft: "1rem",
   backgroundColor: "transparent",
-  border: ".0625rem solid #94A3B8",
-  borderLeft: 0,
-  borderRadius: "0 .5rem .5rem 0",
+  border: 0,
   fontWeight: 400,
   fontSize: "1rem",
   lineHeight: "150%",

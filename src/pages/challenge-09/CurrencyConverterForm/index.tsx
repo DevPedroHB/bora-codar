@@ -8,9 +8,9 @@ import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import {
   CurrencyConverterFormContainer,
-  CurrencySymbol,
   Form,
-  FormGroup,
+  InputWrapper,
+  InvertValues,
   SelectContent,
   SelectIcon,
   SelectItem,
@@ -77,8 +77,8 @@ export function CurrencyConverterForm({ codes }: ICurrencyConverterForm) {
     <CurrencyConverterFormContainer>
       <h2>Conversor de moedas</h2>
       <Form>
-        <FormGroup>
-          <CurrencySymbol>{getSymbolFromCurrency(base)}</CurrencySymbol>
+        <InputWrapper>
+          <span>{getSymbolFromCurrency(base)}</span>
           <input type="number" min="0" {...register("value")} />
           <Controller
             name="base"
@@ -127,12 +127,12 @@ export function CurrencyConverterForm({ codes }: ICurrencyConverterForm) {
               );
             }}
           />
-        </FormGroup>
-        <FormGroup icon>
+        </InputWrapper>
+        <InvertValues>
           <ArrowsLeftRight size={24} onClick={() => handleInvertValues()} />
-        </FormGroup>
-        <FormGroup>
-          <CurrencySymbol>{getSymbolFromCurrency(target)}</CurrencySymbol>
+        </InvertValues>
+        <InputWrapper>
+          <span>{getSymbolFromCurrency(target)}</span>
           <input type="number" {...register("result")} disabled />
           <Controller
             name="target"
@@ -181,7 +181,7 @@ export function CurrencyConverterForm({ codes }: ICurrencyConverterForm) {
               );
             }}
           />
-        </FormGroup>
+        </InputWrapper>
       </Form>
     </CurrencyConverterFormContainer>
   );
