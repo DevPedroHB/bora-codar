@@ -18,10 +18,9 @@ export const InputWrapper = styled("div", {
   flex: 1,
   display: "flex",
   alignItems: "center",
-  position: "relative",
   border: ".0625rem solid #94A3B8",
   borderRadius: ".5rem",
-  padding: "1rem",
+  padding: "0 1rem",
 
   "> span": {
     marginRight: ".25rem",
@@ -30,9 +29,9 @@ export const InputWrapper = styled("div", {
   input: {
     width: "100%",
     minWidth: "5rem",
+    padding: "1rem 0",
     backgroundColor: "transparent",
     border: "0",
-    borderRight: "1px solid #94A3B8",
     fontWeight: 400,
     fontSize: "1rem",
     lineHeight: 0,
@@ -55,15 +54,25 @@ export const InvertValues = styled("div", {
 });
 
 export const SelectTrigger = styled(Select.SelectTrigger, {
+  display: "flex",
   gap: ".5rem",
   paddingLeft: "1rem",
+  color: "#0F172A",
   backgroundColor: "transparent",
   border: 0,
   fontWeight: 400,
   fontSize: "1rem",
   lineHeight: "150%",
-  color: "#0F172A",
-  display: "flex",
+  position: "relative",
+
+  "&::before": {
+    content: "",
+    height: "1.5rem",
+    width: ".0625rem",
+    backgroundColor: "#94a3b8",
+    position: "absolute",
+    left: 0,
+  },
 });
 
 export const SelectIcon = styled(Select.SelectIcon, {

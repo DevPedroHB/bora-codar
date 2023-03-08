@@ -1,44 +1,44 @@
 import { ApexOptions } from "apexcharts";
 import dynamic from "next/dynamic";
-import { ExchangeRateChartContainer } from "./styles";
+import { ChartControls, ExchangeRateChartContainer } from "./styles";
 
 const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-const options: ApexOptions = {
-  colors: ["#7C3AED"],
-  chart: {
-    type: "area",
-    zoom: {
-      autoScaleYaxis: true,
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  xaxis: {
-    type: "datetime",
-    tickAmount: 6,
-    axisBorder: {
-      show: false,
-    },
-  },
-  tooltip: {
-    x: {
-      format: "dd MMM yyyy",
-    },
-  },
-  fill: {
-    type: "gradient",
-    gradient: {
-      shadeIntensity: 1,
-      opacityFrom: 0.7,
-      opacityTo: 0.9,
-      stops: [0, 100],
-    },
-  },
-};
+// const options: ApexOptions = {
+//   colors: ["#7C3AED"],
+//   chart: {
+//     type: "area",
+//     zoom: {
+//       autoScaleYaxis: true,
+//     },
+//   },
+//   dataLabels: {
+//     enabled: false,
+//   },
+//   xaxis: {
+//     type: "datetime",
+//     tickAmount: 6,
+//     axisBorder: {
+//       show: false,
+//     },
+//   },
+//   tooltip: {
+//     x: {
+//       format: "dd MMM yyyy",
+//     },
+//   },
+//   fill: {
+//     type: "gradient",
+//     gradient: {
+//       shadeIntensity: 1,
+//       opacityFrom: 0.7,
+//       opacityTo: 0.9,
+//       stops: [0, 100],
+//     },
+//   },
+// };
 
 const series: ApexOptions["series"] = [
   {
@@ -414,6 +414,73 @@ const series: ApexOptions["series"] = [
   },
 ];
 
+const options: ApexOptions = {
+  chart: {
+    height: 350,
+    type: "area",
+    toolbar: {
+      show: false,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: "straight",
+  },
+  yaxis: {
+    tickAmount: 5,
+    labels: {
+      formatter: (value) => {
+        return value.toFixed(1).replace(".", ",");
+      },
+    },
+  },
+  xaxis: {
+    labels: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  fill: {
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.7,
+      opacityTo: 0.9,
+      stops: [0, 100],
+    },
+  },
+  colors: ["#7C3AED"],
+  tooltip: {
+    custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+      /* eslint-disable indent */
+      return `
+        <div class="tooltip">
+          <span>
+            ${Number(series[seriesIndex][dataPointIndex])
+              .toFixed(2)
+              .replace(".", ",")}
+          </span>
+          <span>
+            ${new Date(
+              w.globals.seriesX[seriesIndex][dataPointIndex]
+            ).toLocaleDateString("pt-BR", {
+              weekday: "short",
+              month: "short",
+              day: "numeric",
+            })}
+          </span>
+        </div>
+      `;
+    },
+  },
+};
+
 export function ExchangeRateChart() {
   return (
     <ExchangeRateChartContainer>
@@ -425,6 +492,14 @@ export function ExchangeRateChart() {
         options={options}
         series={series}
       />
+      <ChartControls>
+        <button>1D</button>
+        <button>5D</button>
+        <button>1M</button>
+        <button className="active">1A</button>
+        <button>5A</button>
+        <button>Máx</button>
+      </ChartControls>
     </ExchangeRateChartContainer>
   );
 }
