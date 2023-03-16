@@ -29,6 +29,7 @@
     "immer": "^9.0.19",
     "next": "13.1.6",
     "next-seo": "^5.15.0",
+    "node-ipinfo": "^3.4.0",
     "nookies": "^2.5.2",
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",

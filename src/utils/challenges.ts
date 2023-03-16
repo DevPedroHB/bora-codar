@@ -7,6 +7,7 @@ import BoraCodar06img from "@/assets/images/bora-codar-06.png";
 import BoraCodar07img from "@/assets/images/bora-codar-07.png";
 import BoraCodar08img from "@/assets/images/bora-codar-08.png";
 import BoraCodar09img from "@/assets/images/bora-codar-09.png";
+import BoraCodar10img from "@/assets/images/bora-codar-10.png";
 
 export const challenges = [
   {
@@ -71,5 +72,12 @@ export const challenges = [
     title: "Conversor de Moedas",
     description:
       "Este projeto é um conversor de moedas que permite a conversão entre diferentes tipos de moedas. Além disso, ele apresenta um gráfico que mostra as cotações entre as moedas selecionadas nos últimos 12 meses.",
+  },
+  {
+    id: 10,
+    imgURL: BoraCodar10img,
+    title: "Página de Clima.",
+    description:
+      "Este projeto é uma página de clima que exibe informações sobre a temperatura, qualidade do ar, horário do sol e previsão do tempo para uma determinada localidade.",
   },
 ];

@@ -6,7 +6,7 @@ export function getUniqueFieldValues<T>(
 
   const uniqueFieldValues = [...new Set(fieldValues)];
 
-  return uniqueFieldValues.sort(function (a, b) {
+  return uniqueFieldValues.sort((a, b) => {
     return String(a).localeCompare(String(b));
   });
 }
