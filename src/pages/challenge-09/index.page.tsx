@@ -1,8 +1,8 @@
 import { apiChallenge09 } from "@/lib/axios";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import { CurrencyConverterForm } from "./CurrencyConverterForm";
-import { ExchangeRateChart } from "./ExchangeRateChart";
+import { CurrencyConverterForm } from "./components/CurrencyConverterForm";
+import { ExchangeRateChart } from "./components/ExchangeRateChart";
 import { Challenge09Container, QuoteCard } from "./styles";
 
 interface IChallenge09 {

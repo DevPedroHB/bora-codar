@@ -6,40 +6,6 @@ const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-// const options: ApexOptions = {
-//   colors: ["#7C3AED"],
-//   chart: {
-//     type: "area",
-//     zoom: {
-//       autoScaleYaxis: true,
-//     },
-//   },
-//   dataLabels: {
-//     enabled: false,
-//   },
-//   xaxis: {
-//     type: "datetime",
-//     tickAmount: 6,
-//     axisBorder: {
-//       show: false,
-//     },
-//   },
-//   tooltip: {
-//     x: {
-//       format: "dd MMM yyyy",
-//     },
-//   },
-//   fill: {
-//     type: "gradient",
-//     gradient: {
-//       shadeIntensity: 1,
-//       opacityFrom: 0.7,
-//       opacityTo: 0.9,
-//       stops: [0, 100],
-//     },
-//   },
-// };
-
 const series: ApexOptions["series"] = [
   {
     name: "Cotação",

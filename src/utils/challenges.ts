@@ -8,6 +8,7 @@ import BoraCodar07img from "@/assets/images/bora-codar-07.png";
 import BoraCodar08img from "@/assets/images/bora-codar-08.png";
 import BoraCodar09img from "@/assets/images/bora-codar-09.png";
 import BoraCodar10img from "@/assets/images/bora-codar-10.png";
+import BoraCodar11img from "@/assets/images/bora-codar-11.png";
 
 export const challenges = [
   {
@@ -79,5 +80,12 @@ export const challenges = [
     title: "Página de Clima.",
     description:
       "Este projeto é uma página de clima que exibe informações sobre a temperatura, qualidade do ar, horário do sol e previsão do tempo para uma determinada localidade.",
+  },
+  {
+    id: 11,
+    imgURL: BoraCodar11img,
+    title: "Tela de Login.",
+    description:
+      "Este é um projeto de Tela de Login que tem como objetivo oferecer uma interface simples e fácil de usar para autenticação de usuários em sistemas web. A tela permite que o usuário insira seu e-mail e senha e, em seguida, faça login no sistema.",
   },
 ];
