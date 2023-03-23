@@ -9,6 +9,7 @@ import BoraCodar08img from "@/assets/images/bora-codar-08.png";
 import BoraCodar09img from "@/assets/images/bora-codar-09.png";
 import BoraCodar10img from "@/assets/images/bora-codar-10.png";
 import BoraCodar11img from "@/assets/images/bora-codar-11.png";
+import BoraCodar12img from "@/assets/images/bora-codar-12.png";
 
 export const challenges = [
   {
@@ -77,15 +78,22 @@ export const challenges = [
   {
     id: 10,
     imgURL: BoraCodar10img,
-    title: "Página de Clima.",
+    title: "Página de Clima",
     description:
       "Este projeto é uma página de clima que exibe informações sobre a temperatura, qualidade do ar, horário do sol e previsão do tempo para uma determinada localidade.",
   },
   {
     id: 11,
     imgURL: BoraCodar11img,
-    title: "Tela de Login.",
+    title: "Tela de Login",
     description:
       "Este é um projeto de Tela de Login que tem como objetivo oferecer uma interface simples e fácil de usar para autenticação de usuários em sistemas web. A tela permite que o usuário insira seu e-mail e senha e, em seguida, faça login no sistema.",
+  },
+  {
+    id: 12,
+    imgURL: BoraCodar12img,
+    title: "Kanban",
+    description:
+      "Este é um projeto de Página de Kanban que tem como objetivo oferecer uma interface visual para gerenciamento de tarefas em uma plataforma de Kanban. A página permite que o usuário crie, edite e mova tarefas entre diferentes colunas, além de incluir recursos como busca e filtro de tarefas.",
   },
 ];

@@ -20,6 +20,7 @@ const LoginFormSchema = z.object({
   password: z
     .string()
     .min(6, "A senha deve ter pelo menos 6 caracteres.")
+    .regex(/^[^\s]+$/, "A senha não pode conter espaços em branco.")
     .regex(/[A-Z]/, "A senha deve conter pelo menos uma letra maiúscula.")
     .regex(
       /[!@#$%^&*(),.?":{}|<>]/,
@@ -37,7 +38,7 @@ export function Form() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<LoginFormData>({
     resolver: zodResolver(LoginFormSchema),
   });
@@ -95,7 +96,7 @@ export function Form() {
           )}
           {errors.password && <small>{errors.password.message}</small>}
         </FormGroup>
-        <FormButton>Entrar</FormButton>
+        <FormButton disabled={isSubmitting}>Entrar</FormButton>
       </LoginForm>
       <DontHaveAccount>
         Ainda não tem uma conta? <Link href="/challenge-11">Inscreva-se</Link>
