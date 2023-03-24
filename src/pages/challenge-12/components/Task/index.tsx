@@ -1,5 +1,6 @@
 import { useKanban } from "@/hooks/useKanban";
 import { kanbanTasks } from "@/utils/kanban-tasks";
+import { Trash } from "phosphor-react";
 import { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
 import { KanbanTaskComponent, TaskCategories } from "./styles";
@@ -12,11 +13,11 @@ interface IKanbanTask {
 
 export function KanbanTask({ listIndex, index, task }: IKanbanTask) {
   const ref = useRef<HTMLDivElement>(null);
-  const { move } = useKanban();
+  const { move, handleDeleteTaskById } = useKanban();
 
   const [{ isDragging }, dragRef] = useDrag(() => ({
     type: "task",
-    item: { index, listIndex },
+    item: { listIndex, index },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
@@ -58,12 +59,16 @@ export function KanbanTask({ listIndex, index, task }: IKanbanTask) {
 
   return (
     <KanbanTaskComponent ref={ref} isDragging={isDragging}>
+      <button onClick={() => handleDeleteTaskById(task.id)}>
+        <Trash size={16} weight="bold" />
+      </button>
       <h3>{task.title}</h3>
-      <p>{task.content}</p>
+      <p>{task.description}</p>
       <TaskCategories>
         {task.categories.map((category) => (
           <span key={category}>{category}</span>
         ))}
+        {task.categories.length === 0 && <span>Sem categoria</span>}
       </TaskCategories>
     </KanbanTaskComponent>
   );

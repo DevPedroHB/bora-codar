@@ -1,5 +1,7 @@
+import { KanbanNewTaskFormData } from "@/pages/challenge-12/components/NewTaskModal";
 import { KanbanSearchFormData } from "@/pages/challenge-12/components/Search";
 import { kanbanTasks } from "@/utils/kanban-tasks";
+import { randomBytes } from "crypto";
 import produce from "immer";
 import {
   createContext,
@@ -14,6 +16,8 @@ interface IKanbanContext {
   categories: string[];
   move: (fromList: number, toList: number, from: number, to: number) => void;
   handleFilterTasks: (data: KanbanSearchFormData) => void;
+  handleNewTask: (data: KanbanNewTaskFormData) => void;
+  handleDeleteTaskById: (id: string) => void;
 }
 
 export const KanbanContext = createContext({} as IKanbanContext);
@@ -25,12 +29,13 @@ interface IKanbanContextProvider {
 export default function KanbanContextProvider({
   children,
 }: IKanbanContextProvider) {
+  const [listTasksBackup, setListTasksBackup] = useState(kanbanTasks);
   const [listTasks, setListTasks] = useState(kanbanTasks);
   const [categories, setCategories] = useState<string[]>([]);
 
   function move(fromList: number, toList: number, from: number, to: number) {
-    setListTasks(
-      produce(listTasks, (draft) => {
+    setListTasksBackup(
+      produce(listTasksBackup, (draft) => {
         const dragged = draft[fromList].tasks[from];
 
         draft[fromList].tasks.splice(from, 1);
@@ -42,52 +47,83 @@ export default function KanbanContextProvider({
   const getAllCategories = useCallback(() => {
     const categories = [
       ...new Set(
-        kanbanTasks.flatMap((task) =>
+        listTasksBackup.flatMap((task) =>
           task.tasks.flatMap((subtask) => subtask.categories)
         )
       ),
     ];
 
     setCategories(categories.sort());
-  }, []);
+  }, [listTasksBackup]);
 
-  const handleFilterTasks = useCallback((data: KanbanSearchFormData) => {
-    const listTasksFiltered = kanbanTasks.reduce(
-      (acc: typeof kanbanTasks, current) => {
-        const filteredTasks = current.tasks.filter((task) => {
-          if (data.category && !task.categories.includes(data.category)) {
-            return false;
-          }
-          if (data.query) {
-            const query = data.query.toLowerCase();
-            if (
-              !task.title.toLowerCase().includes(query) &&
-              !task.content.toLowerCase().includes(query)
-            ) {
+  const handleFilterTasks = useCallback(
+    (data: KanbanSearchFormData) => {
+      const listTasksFiltered = listTasksBackup.reduce(
+        (acc: typeof kanbanTasks, current) => {
+          const filteredTasks = current.tasks.filter((task) => {
+            if (data.category && !task.categories.includes(data.category)) {
               return false;
             }
-          }
-          return true;
-        });
+            if (data.query) {
+              const query = data.query.toLowerCase();
+              if (
+                !task.title.toLowerCase().includes(query) &&
+                !task.description.toLowerCase().includes(query)
+              ) {
+                return false;
+              }
+            }
+            return true;
+          });
 
-        if (filteredTasks.length > 0) {
-          acc.push({
-            title: current.title,
-            tasks: filteredTasks,
+          if (filteredTasks.length > 0) {
+            acc.push({
+              title: current.title,
+              creatable: current.creatable,
+              tasks: filteredTasks,
+            });
+          }
+
+          return acc;
+        },
+        []
+      );
+
+      setListTasks(listTasksFiltered);
+    },
+    [listTasksBackup]
+  );
+
+  function handleNewTask(data: KanbanNewTaskFormData) {
+    setListTasksBackup(
+      produce((draft) => {
+        const toDoColumn = draft.find((column) => column.title === "A fazer");
+
+        if (toDoColumn) {
+          toDoColumn.tasks.push({
+            id: randomBytes(20).toString("hex"),
+            title: data.title,
+            description: data.description,
+            categories: data.categories,
           });
         }
-
-        return acc;
-      },
-      []
+      })
     );
+  }
 
-    setListTasks(listTasksFiltered);
-  }, []);
+  function handleDeleteTaskById(id: string) {
+    setListTasksBackup(
+      produce(listTasksBackup, (draft) => {
+        draft.forEach((column) => {
+          column.tasks = column.tasks.filter((task) => task.id !== id);
+        });
+      })
+    );
+  }
 
   useEffect(() => {
     getAllCategories();
-  }, [getAllCategories]);
+  }, [getAllCategories, listTasksBackup]);
 
   return (
     <KanbanContext.Provider
@@ -96,6 +132,8 @@ export default function KanbanContextProvider({
         categories,
         move,
         handleFilterTasks,
+        handleNewTask,
+        handleDeleteTaskById,
       }}
     >
       {children}

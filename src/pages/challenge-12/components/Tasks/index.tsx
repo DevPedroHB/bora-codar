@@ -1,6 +1,14 @@
 import { useKanban } from "@/hooks/useKanban";
+import * as Dialog from "@radix-ui/react-dialog";
+import { Plus } from "phosphor-react";
+import { NewTaskModal } from "../NewTaskModal";
 import { KanbanTask } from "../Task";
-import { KanbanTasksComponent, TaskContent, TaskWrapper } from "./styles";
+import {
+  KanbanTasksComponent,
+  TasksContent,
+  TasksTitle,
+  TasksWrapper,
+} from "./styles";
 
 export function KanbanTasks() {
   const { listTasks } = useKanban();
@@ -8,9 +16,21 @@ export function KanbanTasks() {
   return (
     <KanbanTasksComponent>
       {listTasks.map((tasks, listIndex) => (
-        <TaskContent key={tasks.title}>
-          <h2>{tasks.title}</h2>
-          <TaskWrapper>
+        <TasksContent key={tasks.title}>
+          <TasksTitle>
+            <h2>{tasks.title}</h2>
+            {tasks.creatable && (
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <button>
+                    <Plus size={20} />
+                  </button>
+                </Dialog.Trigger>
+                <NewTaskModal />
+              </Dialog.Root>
+            )}
+          </TasksTitle>
+          <TasksWrapper>
             {tasks.tasks.map((task, index) => (
               <KanbanTask
                 key={task.id}
@@ -19,8 +39,8 @@ export function KanbanTasks() {
                 task={task}
               />
             ))}
-          </TaskWrapper>
-        </TaskContent>
+          </TasksWrapper>
+        </TasksContent>
       ))}
     </KanbanTasksComponent>
   );

@@ -1,32 +1,35 @@
+import { randomBytes } from "crypto";
+
 export const kanbanTasks = [
   {
     title: "A fazer",
+    creatable: true,
     tasks: [
       {
-        id: 11,
+        id: randomBytes(20).toString("hex"),
         title: "#boraCodar um Kanban 🧑‍💻",
-        content:
+        description:
           "Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
         categories: ["rocketseat", "desafio"],
       },
       {
-        id: 12,
+        id: randomBytes(20).toString("hex"),
         title: "Manter a ofensiva 🔥",
-        content:
+        description:
           "Manter minha atividade na plataforma da Rocketseat para não perder a ofensiva",
         categories: ["rocketseat"],
       },
       {
-        id: 13,
+        id: randomBytes(20).toString("hex"),
         title: "Almoçar 🥗",
-        content:
+        description:
           "Me alimentar, aproveitando um momento de descanso para recarregar minhas energias durante o almoço",
         categories: ["autocuidado"],
       },
       {
-        id: 14,
+        id: randomBytes(20).toString("hex"),
         title: "Curtir post do #boraCodar 💜",
-        content:
+        description:
           "Deixar o like para demonstrar que gostei do novo desafio proposto",
         categories: ["rocketseat"],
       },
@@ -34,18 +37,19 @@ export const kanbanTasks = [
   },
   {
     title: "Fazendo",
+    creatable: false,
     tasks: [
       {
-        id: 15,
+        id: randomBytes(20).toString("hex"),
         title: "Conferir o novo desafio 🚀",
-        content:
+        description:
           "Conferir o novo projeto do #boraCodar para fazê-lo da melhor maneira possível",
         categories: ["rocketseat", "desafio"],
       },
       {
-        id: 16,
+        id: randomBytes(20).toString("hex"),
         title: "Ser incrível 😎",
-        content:
+        description:
           "Sempre me lembrar de manter minha autenticidade e espalhar amor",
         categories: ["autocuidado"],
       },
@@ -53,32 +57,33 @@ export const kanbanTasks = [
   },
   {
     title: "Feito",
+    creatable: false,
     tasks: [
       {
-        id: 17,
+        id: randomBytes(20).toString("hex"),
         title: "#boraCodar uma página de login 🧑‍💻",
-        content:
+        description:
           "Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
         categories: ["rocketseat", "desafio"],
       },
       {
-        id: 18,
+        id: randomBytes(20).toString("hex"),
         title: "#boraCodar uma página de clima 🧑‍💻",
-        content:
+        description:
           "Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
         categories: ["rocketseat", "desafio"],
       },
       {
-        id: 19,
+        id: randomBytes(20).toString("hex"),
         title: "#boraCodar um conversor 🧑‍💻",
-        content:
+        description:
           "Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
         categories: ["rocketseat", "desafio"],
       },
       {
-        id: 20,
+        id: randomBytes(20).toString("hex"),
         title: "#boraCodar um dashboard 🧑‍💻",
-        content:
+        description:
           "Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um quadro de Kanban.",
         categories: ["rocketseat", "desafio"],
       },

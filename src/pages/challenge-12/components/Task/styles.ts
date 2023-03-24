@@ -12,6 +12,7 @@ export const KanbanTaskComponent = styled("div", {
   fontSize: ".875rem",
   fontWeight: 500,
   cursor: "grab",
+  position: "relative",
 
   h3: {
     color: "#403937",
@@ -19,6 +20,20 @@ export const KanbanTaskComponent = styled("div", {
 
   p: {
     color: "#756966",
+  },
+
+  button: {
+    position: "absolute",
+    top: ".625rem",
+    right: ".625rem",
+    background: "transparent",
+    color: "#756966",
+    border: 0,
+    lineHeight: 0,
+
+    "&:hover": {
+      color: "#7C3AED",
+    },
   },
 
   variants: {
@@ -29,7 +44,7 @@ export const KanbanTaskComponent = styled("div", {
         border: ".125rem dashed rgba(0, 0, 0, 0.2)",
         boxShadow: "none",
 
-        "h3, p, div, span": {
+        "h3, p, div, span, button": {
           opacity: 0,
         },
       },
