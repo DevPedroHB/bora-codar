@@ -10,6 +10,7 @@ import BoraCodar09img from "@/assets/images/bora-codar-09.png";
 import BoraCodar10img from "@/assets/images/bora-codar-10.png";
 import BoraCodar11img from "@/assets/images/bora-codar-11.png";
 import BoraCodar12img from "@/assets/images/bora-codar-12.png";
+import BoraCodar13img from "@/assets/images/bora-codar-13.png";
 
 export const challenges = [
   {
@@ -95,5 +96,12 @@ export const challenges = [
     title: "Kanban",
     description:
       "Este é um projeto de Página de Kanban que tem como objetivo oferecer uma interface visual para gerenciamento de tarefas em uma plataforma de Kanban. A página permite que o usuário crie, edite e mova tarefas entre diferentes colunas, além de incluir recursos como busca e filtro de tarefas.",
+  },
+  {
+    id: 13,
+    imgURL: BoraCodar13img,
+    title: "Formulário de Cartão de Crédito",
+    description:
+      "Este projeto é um formulário de cartão de crédito que permite aos usuários inserir as informações de seus cartões de crédito de forma segura.",
   },
 ];

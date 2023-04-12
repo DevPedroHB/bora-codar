@@ -44,7 +44,7 @@ export const SearchInputWrapper = styled("div", {
     padding: "1rem 1.5rem 1rem 3.4375rem",
     backgroundColor: "#FFFFFF",
     color: "#505059",
-    border: "0.7px solid #E3E3E3",
+    border: "1px solid #374151",
     borderRadius: ".5rem",
     boxShadow: "0px .25rem 1rem rgba(22, 22, 22, 0.1)",
     fontWeight: 400,

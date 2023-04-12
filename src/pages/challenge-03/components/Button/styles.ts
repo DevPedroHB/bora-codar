@@ -84,6 +84,5 @@ export const ButtonComponent = styled("button", {
 
   defaultVariants: {
     variant: "primary",
-    animated: "icon",
   },
 });
