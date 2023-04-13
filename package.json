@@ -29,6 +29,7 @@
     "dotenv": "^16.0.3",
     "eslint-config-next": "13.1.6",
     "eventsource-parser": "^0.1.0",
+    "filesize": "^10.0.7",
     "immer": "^9.0.19",
     "next": "13.1.6",
     "next-seo": "^5.15.0",

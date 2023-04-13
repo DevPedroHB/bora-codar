@@ -11,6 +11,7 @@ import BoraCodar10img from "@/assets/images/bora-codar-10.png";
 import BoraCodar11img from "@/assets/images/bora-codar-11.png";
 import BoraCodar12img from "@/assets/images/bora-codar-12.png";
 import BoraCodar13img from "@/assets/images/bora-codar-13.png";
+import BoraCodar14img from "@/assets/images/bora-codar-14.png";
 
 export const challenges = [
   {
@@ -103,5 +104,12 @@ export const challenges = [
     title: "Formulário de Cartão de Crédito",
     description:
       "Este projeto é um formulário de cartão de crédito que permite aos usuários inserir as informações de seus cartões de crédito de forma segura.",
+  },
+  {
+    id: 14,
+    imgURL: BoraCodar14img,
+    title: "Componente de Upload",
+    description:
+      "Este projeto é um componente de upload que permite aos usuários selecionar e fazer upload de arquivos de forma simples e intuitiva.",
   },
 ];
