@@ -12,6 +12,7 @@ import BoraCodar11img from "@/assets/images/bora-codar-11.png";
 import BoraCodar12img from "@/assets/images/bora-codar-12.png";
 import BoraCodar13img from "@/assets/images/bora-codar-13.png";
 import BoraCodar14img from "@/assets/images/bora-codar-14.png";
+import BoraCodar15img from "@/assets/images/bora-codar-15.png";
 
 export const challenges = [
   {
@@ -111,5 +112,12 @@ export const challenges = [
     title: "Componente de Upload",
     description:
       "Este projeto é um componente de upload que permite aos usuários selecionar e fazer upload de arquivos de forma simples e intuitiva.",
+  },
+  {
+    id: 15,
+    imgURL: BoraCodar15img,
+    title: "Pricing Table",
+    description:
+      "Este projeto é uma aplicação web que permite aos usuários criar, personalizar e compartilhar tabelas de preços de seus produtos ou serviços.",
   },
 ];

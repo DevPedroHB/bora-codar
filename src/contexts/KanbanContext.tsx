@@ -1,6 +1,6 @@
 import { KanbanNewTaskFormData } from "@/pages/challenge-12/components/NewTaskModal";
 import { KanbanSearchFormData } from "@/pages/challenge-12/components/Search";
-import { kanbanTasks } from "@/utils/kanban-tasks";
+import { kanbanTasks } from "@/utils";
 import { randomBytes } from "crypto";
 import produce from "immer";
 import {
