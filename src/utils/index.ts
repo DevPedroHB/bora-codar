@@ -1,11 +1,14 @@
 export { carnavalBlocks } from "./carnaval-blocks";
 export { challenges } from "./challenges";
 export { chatDefaultMessages } from "./chat-default-messages";
+export { contactPageList } from "./contact-page-list";
+export type { IContactList } from "./contact-page-list";
 export { formatMoneyWithSuffix } from "./format-money-with-suffix";
 export { formatNumberInMoney } from "./format-number-in-money";
 export { formatRandomNumberInMinutes } from "./format-random-number-in-minutes";
 export { formatTextForRoute } from "./format-text-for-route";
 export { getPercentage } from "./get-percentage";
+export { getRandomColor } from "./get-random-color";
 export { getRandomInt } from "./get-random-int";
 export { getUniqueFieldValues } from "./get-unique-field-values";
 export { kanbanTasks } from "./kanban-tasks";
